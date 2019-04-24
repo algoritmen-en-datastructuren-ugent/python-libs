@@ -1,0 +1,147 @@
+
+
+:mod:`priority_queue`
+=====================
+
+.. py:module:: priority_queue
+
+
+
+
+
+
+
+Module Contents
+---------------
+
+
+
+
+
+
+.. py:class:: SpecialSorted(element, value)
+
+   A helper class to sort the elements of a PriorityQueue
+
+
+   
+
+   
+
+   
+
+   .. method:: __eq__(self, other)
+
+      
+
+
+
+   
+
+   .. method:: __ne__(self, other)
+
+      
+
+
+
+   
+
+   .. method:: __lt__(self, other)
+
+      
+
+
+
+
+
+
+
+
+
+
+
+.. py:class:: PriorityQueue(sortkey=lambda x: x)
+
+   Implements a PriorityQueue
+
+
+   
+
+   
+
+   
+
+   .. method:: add(self, item)
+
+      
+      Add an item to the PriorityQueue
+
+      :param item: The item to add
+      :type item: obj
+
+      
+
+
+
+   
+
+   .. method:: peek(self)
+
+      
+      Peeks at the top element
+
+      :return: the top element of the PriorityQueue
+      :rtype: obj
+
+      
+
+
+
+   
+
+   .. method:: poll(self)
+
+      
+      Removes the top element of the PriorityQueue and returns it
+
+      :return: the top element of the PriorityQueue
+      :rtype: obj
+
+      
+
+
+
+   
+
+   .. method:: is_empty(self)
+
+      
+      Returns whether the PriorityQueue is empty
+
+      :return: True if the PriorityQueue is empty
+      :rtype: int
+
+      
+
+
+
+   
+
+   .. method:: __str__(self)
+
+      
+      Returns the string representation of the PriorityQueue
+
+      :return: a string representation
+      :rtype: str
+
+      
+
+
+
+
+
+
+
+
+

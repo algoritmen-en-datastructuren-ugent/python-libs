@@ -1,0 +1,376 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>priority_queue &mdash; Python Libraries  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="Python Libraries  documentation" href="../../index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Python Libraries
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Libraries</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../graph_library/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">graph_library</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../graph_library/index.html#module-contents">Module Contents</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../graph_library/index.html#graph_library.AnnotatedObject">AnnotatedObject</a></li>
+</ul>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="../graph_library/index.html#graph_library.Node">Node</a></li>
+</ul>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="../graph_library/index.html#graph_library.Edge">Edge</a></li>
+</ul>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="../graph_library/index.html#graph_library.DirectedEdge">DirectedEdge</a></li>
+</ul>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="../graph_library/index.html#graph_library.UndirectedEdge">UndirectedEdge</a></li>
+</ul>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="../graph_library/index.html#graph_library.Graph">Graph</a></li>
+</ul>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="../graph_library/index.html#graph_library.SimpleGraph">SimpleGraph</a></li>
+</ul>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="../graph_library/index.html#graph_library.DirectedGraph">DirectedGraph</a></li>
+</ul>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="../graph_library/index.html#graph_library.UnDirectedGraph">UnDirectedGraph</a></li>
+</ul>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="../graph_library/index.html#graph_library.DirectedMultiGraph">DirectedMultiGraph</a></li>
+</ul>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="../graph_library/index.html#graph_library.UndirectedMultiGraph">UndirectedMultiGraph</a></li>
+</ul>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="../graph_library/index.html#graph_library.set_weights">set_weights</a></li>
+</ul>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="../graph_library/index.html#graph_library.directed_graph_from_dict">directed_graph_from_dict</a></li>
+</ul>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="../graph_library/index.html#graph_library.undirected_graph_from_dict">undirected_graph_from_dict</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">priority_queue</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-contents">Module Contents</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#priority_queue.SpecialSorted">SpecialSorted</a></li>
+</ul>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#priority_queue.PriorityQueue">PriorityQueue</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Python Libraries</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li><code class="xref py py-mod docutils literal notranslate"><span class="pre">priority_queue</span></code></li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/autoapi/priority_queue/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-priority_queue">
+<span id="priority-queue"></span><h1><a class="reference internal" href="#module-priority_queue" title="priority_queue"><code class="xref py py-mod docutils literal notranslate"><span class="pre">priority_queue</span></code></a><a class="headerlink" href="#module-priority_queue" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="priority_queue.SpecialSorted">
+<em class="property">class </em><code class="descclassname">priority_queue.</code><code class="descname">SpecialSorted</code><span class="sig-paren">(</span><em>element</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#priority_queue.SpecialSorted" title="Permalink to this definition">¶</a></dt>
+<dd><p>A helper class to sort the elements of a PriorityQueue</p>
+<dl class="method">
+<dt id="priority_queue.SpecialSorted.__eq__">
+<code class="descname">__eq__</code><span class="sig-paren">(</span><em>self</em>, <em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#priority_queue.SpecialSorted.__eq__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="priority_queue.SpecialSorted.__ne__">
+<code class="descname">__ne__</code><span class="sig-paren">(</span><em>self</em>, <em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#priority_queue.SpecialSorted.__ne__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="priority_queue.SpecialSorted.__lt__">
+<code class="descname">__lt__</code><span class="sig-paren">(</span><em>self</em>, <em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#priority_queue.SpecialSorted.__lt__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="priority_queue.PriorityQueue">
+<em class="property">class </em><code class="descclassname">priority_queue.</code><code class="descname">PriorityQueue</code><span class="sig-paren">(</span><em>sortkey=lambda x: x</em><span class="sig-paren">)</span><a class="headerlink" href="#priority_queue.PriorityQueue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Implements a PriorityQueue</p>
+<dl class="method">
+<dt id="priority_queue.PriorityQueue.add">
+<code class="descname">add</code><span class="sig-paren">(</span><em>self</em>, <em>item</em><span class="sig-paren">)</span><a class="headerlink" href="#priority_queue.PriorityQueue.add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add an item to the PriorityQueue</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>item</strong> (<em>obj</em>) – The item to add</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="priority_queue.PriorityQueue.peek">
+<code class="descname">peek</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#priority_queue.PriorityQueue.peek" title="Permalink to this definition">¶</a></dt>
+<dd><p>Peeks at the top element</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the top element of the PriorityQueue</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>obj</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="priority_queue.PriorityQueue.poll">
+<code class="descname">poll</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#priority_queue.PriorityQueue.poll" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes the top element of the PriorityQueue and returns it</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the top element of the PriorityQueue</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>obj</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="priority_queue.PriorityQueue.is_empty">
+<code class="descname">is_empty</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#priority_queue.PriorityQueue.is_empty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns whether the PriorityQueue is empty</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>True if the PriorityQueue is empty</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="priority_queue.PriorityQueue.__str__">
+<code class="descname">__str__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#priority_queue.PriorityQueue.__str__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the string representation of the PriorityQueue</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>a string representation</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Dieter Mourisse.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/language_data.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

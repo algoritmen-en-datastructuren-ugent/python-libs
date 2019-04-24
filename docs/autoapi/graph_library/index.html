@@ -1,0 +1,1078 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>graph_library &mdash; Python Libraries  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="Python Libraries  documentation" href="../../index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Python Libraries
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Libraries</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">graph_library</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-contents">Module Contents</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#graph_library.AnnotatedObject">AnnotatedObject</a></li>
+</ul>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#graph_library.Node">Node</a></li>
+</ul>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#graph_library.Edge">Edge</a></li>
+</ul>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#graph_library.DirectedEdge">DirectedEdge</a></li>
+</ul>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#graph_library.UndirectedEdge">UndirectedEdge</a></li>
+</ul>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#graph_library.Graph">Graph</a></li>
+</ul>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#graph_library.SimpleGraph">SimpleGraph</a></li>
+</ul>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#graph_library.DirectedGraph">DirectedGraph</a></li>
+</ul>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#graph_library.UnDirectedGraph">UnDirectedGraph</a></li>
+</ul>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#graph_library.DirectedMultiGraph">DirectedMultiGraph</a></li>
+</ul>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#graph_library.UndirectedMultiGraph">UndirectedMultiGraph</a></li>
+</ul>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#graph_library.set_weights">set_weights</a></li>
+</ul>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#graph_library.directed_graph_from_dict">directed_graph_from_dict</a></li>
+</ul>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#graph_library.undirected_graph_from_dict">undirected_graph_from_dict</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../priority_queue/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">priority_queue</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../priority_queue/index.html#module-contents">Module Contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Python Libraries</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li><code class="xref py py-mod docutils literal notranslate"><span class="pre">graph_library</span></code></li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/autoapi/graph_library/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-graph_library">
+<span id="graph-library"></span><h1><a class="reference internal" href="#module-graph_library" title="graph_library"><code class="xref py py-mod docutils literal notranslate"><span class="pre">graph_library</span></code></a><a class="headerlink" href="#module-graph_library" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="graph_library.AnnotatedObject">
+<em class="property">class </em><code class="descclassname">graph_library.</code><code class="descname">AnnotatedObject</code><a class="headerlink" href="#graph_library.AnnotatedObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents an annotated object. Any number of annotations can be attached as (key,value) pairs, i.e. each annotation is identified with a unique key.</p>
+<dl class="method">
+<dt id="graph_library.AnnotatedObject.set_annotation">
+<code class="descname">set_annotation</code><span class="sig-paren">(</span><em>self</em>, <em>key</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.AnnotatedObject.set_annotation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Annotate node with some (key,value) pair.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> – key used to retrieve the annotation</p></li>
+<li><p><strong>value</strong> – actual annotation</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="graph_library.AnnotatedObject.get_annotation">
+<code class="descname">get_annotation</code><span class="sig-paren">(</span><em>self</em>, <em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.AnnotatedObject.get_annotation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve a previously attached annotation identified with the given key.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>key</strong> – key specified when adding the annotation</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>retrieved annotation, if present, else None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="graph_library.AnnotatedObject.remove_annotation">
+<code class="descname">remove_annotation</code><span class="sig-paren">(</span><em>self</em>, <em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.AnnotatedObject.remove_annotation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove the annotation identified with the given key.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>key</strong> – key with which the annotation is identified</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if the annotation is successfully removed</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="graph_library.AnnotatedObject.has_annotation">
+<code class="descname">has_annotation</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.AnnotatedObject.has_annotation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates whether this node has any annotations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>True if this node has annotations</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="graph_library.AnnotatedObject.num_annotations">
+<code class="descname">num_annotations</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.AnnotatedObject.num_annotations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the number of currently attached annotations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>number of annotations</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="graph_library.AnnotatedObject.get_annotations">
+<code class="descname">get_annotations</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.AnnotatedObject.get_annotations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get all attached annotations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>dictionary containing all anootations as (key, value) pairs</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="graph_library.Node">
+<em class="property">class </em><code class="descclassname">graph_library.</code><code class="descname">Node</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.Node" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases:<a class="reference internal" href="#graph_library.AnnotatedObject" title="graph_library.AnnotatedObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">graph_library.AnnotatedObject</span></code></a></p>
+<p>Represents a node in a graph. Nodes are identified with a string label (name) which should be unique among all nodes in a graph. Nodes with the same name are considered equal and an error will be thrown when attempting to add equal nodes to any graph. An unlimited number of annotations can be added to a node, e.g. during execution of a specific algorithm.</p>
+<dl class="method">
+<dt id="graph_library.Node.__str__">
+<code class="descname">__str__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.Node.__str__" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>formatted string representation</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="graph_library.Node.__eq__">
+<code class="descname">__eq__</code><span class="sig-paren">(</span><em>self</em>, <em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.Node.__eq__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compares nodes for equality based on their name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="#graph_library.Node" title="graph_library.Node"><em>Node</em></a>) – other object to compare for equality</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if the given other object is also a node with the same name</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="graph_library.Node.__hash__">
+<code class="descname">__hash__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.Node.__hash__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hash code computation based on node name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>hash code</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="graph_library.Node.__repr__">
+<code class="descname">__repr__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.Node.__repr__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="graph_library.Edge">
+<em class="property">class </em><code class="descclassname">graph_library.</code><code class="descname">Edge</code><span class="sig-paren">(</span><em>node1</em>, <em>node2</em>, <em>weight=None</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.Edge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases:<a class="reference internal" href="#graph_library.AnnotatedObject" title="graph_library.AnnotatedObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">graph_library.AnnotatedObject</span></code></a></p>
+<p>Represents an edge in a graph. The edge can be directed or undirected. It is assumed that for directed edges, the first node is the source node and the second node is the destination node. For undirected edges it does not mean anything whether a node is the first or second node.
+Edges may have a weight but they are not required to. Besides the weight, an unlimited number of additional annotations can also be added to any edge as (key,value) pairs.
+This class is not intended to be directly instantiated. Explicit directed or undirected edges can be created using one of the constructors of DirectedEdge or UnDirectedEdge</p>
+<dl class="attribute">
+<dt id="graph_library.Edge.node1">
+<code class="descname">node1</code><a class="headerlink" href="#graph_library.Edge.node1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get first node. In case of a directed edge, this node is assumed to be the source node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>first node</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#graph_library.Node" title="graph_library.Node">Node</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="graph_library.Edge.node2">
+<code class="descname">node2</code><a class="headerlink" href="#graph_library.Edge.node2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get second node. In case of a directed edge, this node is assumed to be the destination node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>second node</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#graph_library.Node" title="graph_library.Node">Node</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="graph_library.Edge.get_nodes">
+<code class="descname">get_nodes</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.Edge.get_nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a list containing both nodes (arbitrary order).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>list containing both nodes</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list(<a class="reference internal" href="#graph_library.Node" title="graph_library.Node">Node</a>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="graph_library.Edge.contains">
+<code class="descname">contains</code><span class="sig-paren">(</span><em>self</em>, <em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.Edge.contains" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether this edge contains the given node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>node</strong> (<a class="reference internal" href="#graph_library.Node" title="graph_library.Node"><em>Node</em></a>) – node</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if n is one of both nodes of this edge</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="graph_library.DirectedEdge">
+<em class="property">class </em><code class="descclassname">graph_library.</code><code class="descname">DirectedEdge</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.DirectedEdge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases:<a class="reference internal" href="#graph_library.Edge" title="graph_library.Edge"><code class="xref py py-class docutils literal notranslate"><span class="pre">graph_library.Edge</span></code></a></p>
+<p>Represents a directed edge. This type of edges can be added to a directed graph. An edge (a,b) is not equal to a corresponding edge (b,a).</p>
+<dl class="method">
+<dt id="graph_library.DirectedEdge.is_directed">
+<code class="descname">is_directed</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.DirectedEdge.is_directed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Always returns true as this is a directed edge.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>True</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="graph_library.DirectedEdge.get_source">
+<code class="descname">get_source</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.DirectedEdge.get_source" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the source node of this edge.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>source node</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#graph_library.Node" title="graph_library.Node">Node</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="graph_library.DirectedEdge.get_destination">
+<code class="descname">get_destination</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.DirectedEdge.get_destination" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the destination node of this edge.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>destination node</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#graph_library.Node" title="graph_library.Node">Node</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="graph_library.DirectedEdge.__str__">
+<code class="descname">__str__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.DirectedEdge.__str__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a string representation of the directed edge, formatted as (source,destination).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>string representation</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="graph_library.UndirectedEdge">
+<em class="property">class </em><code class="descclassname">graph_library.</code><code class="descname">UndirectedEdge</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.UndirectedEdge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases:<a class="reference internal" href="#graph_library.Edge" title="graph_library.Edge"><code class="xref py py-class docutils literal notranslate"><span class="pre">graph_library.Edge</span></code></a></p>
+<p>Represents an undirected edge. This type of edges can be added to a undirected graph. Edges {a,b} and {b,a} are equal.</p>
+<dl class="method">
+<dt id="graph_library.UndirectedEdge.is_directed">
+<code class="descname">is_directed</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.UndirectedEdge.is_directed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Always returns False as this is an undirected edge.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>False</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="graph_library.UndirectedEdge.__str__">
+<code class="descname">__str__</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.UndirectedEdge.__str__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a string representation of the undirected edge, formatted as {a,b}.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>string representation</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="graph_library.Graph">
+<em class="property">class </em><code class="descclassname">graph_library.</code><code class="descname">Graph</code><a class="headerlink" href="#graph_library.Graph" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="graph_library.Graph.contains_node">
+<code class="descname">contains_node</code><span class="sig-paren">(</span><em>self</em>, <em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.Graph.contains_node" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether a specific node is contained in the graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>node</strong> (<a class="reference internal" href="#graph_library.Node" title="graph_library.Node"><em>Node</em></a>) – node</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if the given node is contained in the graph</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="graph_library.Graph.get_node_from_name">
+<code class="descname">get_node_from_name</code><span class="sig-paren">(</span><em>self</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.Graph.get_node_from_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a graph node based on its name. If the graph does not contain any node with this name, None is returned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> – node name</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the graph node with the given name; None if the graph does not contain a node with this name</p>
+</dd>
+</dl>
+<p>:rtype Node</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="graph_library.Graph.add_node">
+<code class="descname">add_node</code><span class="sig-paren">(</span><em>self</em>, <em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.Graph.add_node" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a node to the graph. If a node with the same name is already contained in the graph, calling this method does not have any effect and False is returned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>node</strong> (<a class="reference internal" href="#graph_library.Node" title="graph_library.Node"><em>Node</em></a>) – node to add to the graph</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if the node was successfully added</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="graph_library.Graph.remove_node">
+<code class="descname">remove_node</code><span class="sig-paren">(</span><em>self</em>, <em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.Graph.remove_node" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove a node from the graph. All incident edges are also removed. If the given node is not contained in the graph False is returned and calling this method does not have any effect.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>node</strong> (<a class="reference internal" href="#graph_library.Node" title="graph_library.Node"><em>Node</em></a>) – node to be removed</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if the node has been successfully removed</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="graph_library.Graph.get_all_nodes">
+<code class="descname">get_all_nodes</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.Graph.get_all_nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get all nodes contained in the graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>list of all graph nodes</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list(<a class="reference internal" href="#graph_library.Node" title="graph_library.Node">Node</a>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="graph_library.Graph.num_nodes">
+<code class="descname">num_nodes</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.Graph.num_nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the number of nodes (order) of the graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>number of nodes</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="graph_library.Graph.contains_edge">
+<code class="descname">contains_edge</code><span class="sig-paren">(</span><em>self</em>, <em>edge</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.Graph.contains_edge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether the graph contains a given edge.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>edge</strong> (<a class="reference internal" href="#graph_library.Edge" title="graph_library.Edge"><em>Edge</em></a>) – edge</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if the given edge is contained in the graph</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="graph_library.Graph.add_edge">
+<code class="descname">add_edge</code><span class="sig-paren">(</span><em>self</em>, <em>edge</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.Graph.add_edge" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="graph_library.Graph.get_edges">
+<code class="descname">get_edges</code><span class="sig-paren">(</span><em>self</em>, <em>sourcenode</em>, <em>destnode</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.Graph.get_edges" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="graph_library.Graph.contains_edge_between">
+<code class="descname">contains_edge_between</code><span class="sig-paren">(</span><em>self</em>, <em>sourcenode</em>, <em>destnode</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.Graph.contains_edge_between" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether there is an edge from the given source node to the given destination node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sourcenode</strong> (<a class="reference internal" href="#graph_library.Node" title="graph_library.Node"><em>Node</em></a>) – source node</p></li>
+<li><p><strong>destnode</strong> (<a class="reference internal" href="#graph_library.Node" title="graph_library.Node"><em>Node</em></a>) – destination node</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if both nodes are contained in the graph, with an edge between them</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="graph_library.Graph.remove_edge">
+<code class="descname">remove_edge</code><span class="sig-paren">(</span><em>self</em>, <em>edge</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.Graph.remove_edge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove an edge from the graph. If the edge is not present or either the source or destination nodes are not contained in the graph, False is returned and calling this method does not have any effect.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>edge</strong> (<a class="reference internal" href="#graph_library.Edge" title="graph_library.Edge"><em>Edge</em></a>) – edge to be removed</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if the edge has been successfully removed</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="graph_library.Graph.remove_edge_between">
+<code class="descname">remove_edge_between</code><span class="sig-paren">(</span><em>self</em>, <em>sourcenode</em>, <em>destnode</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.Graph.remove_edge_between" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove the edge from the given source node to the given destination node. If such edge is not present or either the source or destination nodes are not contained in the graph, None is returned and calling this method does not have any effect. Else, the removed edge is returned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sourcenode</strong> (<a class="reference internal" href="#graph_library.Node" title="graph_library.Node"><em>Node</em></a>) – source node</p></li>
+<li><p><strong>destnode</strong> (<a class="reference internal" href="#graph_library.Node" title="graph_library.Node"><em>Node</em></a>) – destination node</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>removed edge if it was present; else None</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#graph_library.Edge" title="graph_library.Edge">Edge</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="graph_library.Graph.get_all_edges">
+<code class="descname">get_all_edges</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.Graph.get_all_edges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a list containing all edges from the graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>list of all edges</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list(<a class="reference internal" href="#graph_library.Edge" title="graph_library.Edge">Edge</a>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="graph_library.Graph.num_edges">
+<code class="descname">num_edges</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.Graph.num_edges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the number of edges (size) of the graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>number of edges</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="graph_library.Graph.get_neighbours">
+<code class="descname">get_neighbours</code><span class="sig-paren">(</span><em>self</em>, <em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.Graph.get_neighbours" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get all neighbours of a given node n. A node m is defined to be a neighbour of n if there is an edge from n to m.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>node</strong> (<a class="reference internal" href="#graph_library.Node" title="graph_library.Node"><em>Node</em></a>) – given node</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of neighbours of n</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list(<a class="reference internal" href="#graph_library.Node" title="graph_library.Node">Node</a>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="graph_library.Graph.get_outgoing_edges">
+<code class="descname">get_outgoing_edges</code><span class="sig-paren">(</span><em>self</em>, <em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.Graph.get_outgoing_edges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a list of outgoing edges from a given node n.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>node</strong> (<a class="reference internal" href="#graph_library.Node" title="graph_library.Node"><em>Node</em></a>) – given node</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of outgoing edges</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list(<a class="reference internal" href="#graph_library.Edge" title="graph_library.Edge">Edge</a>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="graph_library.Graph.get_out_degree">
+<code class="descname">get_out_degree</code><span class="sig-paren">(</span><em>self</em>, <em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.Graph.get_out_degree" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the out degree of a node in the graph. The out degree corresponds to the number of outgoing edges.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>node</strong> (<a class="reference internal" href="#graph_library.Node" title="graph_library.Node"><em>Node</em></a>) – node</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>out degree of the given node</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="graph_library.Graph.get_incoming_edges">
+<code class="descname">get_incoming_edges</code><span class="sig-paren">(</span><em>self</em>, <em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.Graph.get_incoming_edges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a list of incoming edges in a given node n.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>node</strong> (<a class="reference internal" href="#graph_library.Node" title="graph_library.Node"><em>Node</em></a>) – given node</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of incoming edges</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list(<a class="reference internal" href="#graph_library.Edge" title="graph_library.Edge">Edge</a>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="graph_library.Graph.get_in_degree">
+<code class="descname">get_in_degree</code><span class="sig-paren">(</span><em>self</em>, <em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.Graph.get_in_degree" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the in degree of a node in the graph. The in degree corresponds to the number of incoming edges.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>node</strong> (<a class="reference internal" href="#graph_library.Node" title="graph_library.Node"><em>Node</em></a>) – node</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>in degree of the given node</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="graph_library.SimpleGraph">
+<em class="property">class </em><code class="descclassname">graph_library.</code><code class="descname">SimpleGraph</code><a class="headerlink" href="#graph_library.SimpleGraph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases:<a class="reference internal" href="#graph_library.Graph" title="graph_library.Graph"><code class="xref py py-class docutils literal notranslate"><span class="pre">graph_library.Graph</span></code></a></p>
+<dl class="method">
+<dt id="graph_library.SimpleGraph.add_edge">
+<code class="descname">add_edge</code><span class="sig-paren">(</span><em>self</em>, <em>edge</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.SimpleGraph.add_edge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add an edge to the graph. The nodes of the edge should already be present in the graph, else an assertion is thrown. If the graph already contains an edge with the same source and destination, calling this method does not have any effect and False is returned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>edge</strong> (<a class="reference internal" href="#graph_library.Edge" title="graph_library.Edge"><em>Edge</em></a>) – edge to be added to the graph</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if the edge is successfully added</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="graph_library.SimpleGraph.get_edge_between">
+<code class="descname">get_edge_between</code><span class="sig-paren">(</span><em>self</em>, <em>source</em>, <em>dest</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.SimpleGraph.get_edge_between" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the edge that goes from the given source node to the given destination node, if any.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>source</strong> (<a class="reference internal" href="#graph_library.Node" title="graph_library.Node"><em>Node</em></a>) – source node</p></li>
+<li><p><strong>dest</strong> (<a class="reference internal" href="#graph_library.Node" title="graph_library.Node"><em>Node</em></a>) – destination node</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the edge between the given nodes, if both nodes are contained in the graph and connected with an edge in the given direction; else None is returned</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#graph_library.Edge" title="graph_library.Edge">Edge</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="graph_library.DirectedGraph">
+<em class="property">class </em><code class="descclassname">graph_library.</code><code class="descname">DirectedGraph</code><span class="sig-paren">(</span><em>graph=None</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.DirectedGraph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases:<a class="reference internal" href="#graph_library.SimpleGraph" title="graph_library.SimpleGraph"><code class="xref py py-class docutils literal notranslate"><span class="pre">graph_library.SimpleGraph</span></code></a></p>
+<p>Represents a directed graph.</p>
+<dl class="method">
+<dt id="graph_library.DirectedGraph.add_edge_between">
+<code class="descname">add_edge_between</code><span class="sig-paren">(</span><em>self</em>, <em>source</em>, <em>destination</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.DirectedGraph.add_edge_between" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds an edge from the given source to destination node. Both nodes should already be contained in the graph, else an assertion is thrown. If an edge is already present from the given source to destination node, None is returned and the graph is not modified, else the newly added edge is returned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>source</strong> (<a class="reference internal" href="#graph_library.Node" title="graph_library.Node"><em>Node</em></a>) – source node</p></li>
+<li><p><strong>destination</strong> (<a class="reference internal" href="#graph_library.Node" title="graph_library.Node"><em>Node</em></a>) – destination node</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>added edge, None if edge between nodes already present</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#graph_library.DirectedEdge" title="graph_library.DirectedEdge">DirectedEdge</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="graph_library.UnDirectedGraph">
+<em class="property">class </em><code class="descclassname">graph_library.</code><code class="descname">UnDirectedGraph</code><span class="sig-paren">(</span><em>graph=None</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.UnDirectedGraph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases:<a class="reference internal" href="#graph_library.SimpleGraph" title="graph_library.SimpleGraph"><code class="xref py py-class docutils literal notranslate"><span class="pre">graph_library.SimpleGraph</span></code></a></p>
+<dl class="method">
+<dt id="graph_library.UnDirectedGraph.add_edge_between">
+<code class="descname">add_edge_between</code><span class="sig-paren">(</span><em>self</em>, <em>source</em>, <em>destination</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.UnDirectedGraph.add_edge_between" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds an edge from the given source to destination node. Both nodes should already be contained in the graph, else an assertion is thrown. If an edge is already present from the given source to destination node, None is returned and the graph is not modified, else the newly added edge is returned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>source</strong> (<a class="reference internal" href="#graph_library.Node" title="graph_library.Node"><em>Node</em></a>) – source node</p></li>
+<li><p><strong>destination</strong> (<a class="reference internal" href="#graph_library.Node" title="graph_library.Node"><em>Node</em></a>) – destination node</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>added edge, None if edge between nodes already present</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>UnDirectedEdge</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="graph_library.UnDirectedGraph.get_incident_edges">
+<code class="descname">get_incident_edges</code><span class="sig-paren">(</span><em>self</em>, <em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.UnDirectedGraph.get_incident_edges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the list of incident edges of a given node n.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>node</strong> (<a class="reference internal" href="#graph_library.Node" title="graph_library.Node"><em>Node</em></a>) – given node</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of incident edges</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list(UnDirectedEdge)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="graph_library.UnDirectedGraph.get_degree">
+<code class="descname">get_degree</code><span class="sig-paren">(</span><em>self</em>, <em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.UnDirectedGraph.get_degree" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the degree of a node in the graph. The degree corresponds to the number of incident edges.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>node</strong> (<a class="reference internal" href="#graph_library.Node" title="graph_library.Node"><em>Node</em></a>) – node</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>degree of the given node</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="graph_library.DirectedMultiGraph">
+<em class="property">class </em><code class="descclassname">graph_library.</code><code class="descname">DirectedMultiGraph</code><span class="sig-paren">(</span><em>graph=None</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.DirectedMultiGraph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases:<a class="reference internal" href="#graph_library.Graph" title="graph_library.Graph"><code class="xref py py-class docutils literal notranslate"><span class="pre">graph_library.Graph</span></code></a></p>
+<dl class="method">
+<dt id="graph_library.DirectedMultiGraph.add_edge_between">
+<code class="descname">add_edge_between</code><span class="sig-paren">(</span><em>self</em>, <em>source</em>, <em>destination</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.DirectedMultiGraph.add_edge_between" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds an edge from the given source to destination node. Both nodes should already be contained in the graph, else an assertion is thrown. The newly added edge is returned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>source</strong> (<a class="reference internal" href="#graph_library.Node" title="graph_library.Node"><em>Node</em></a>) – source node</p></li>
+<li><p><strong>destination</strong> (<a class="reference internal" href="#graph_library.Node" title="graph_library.Node"><em>Node</em></a>) – destination node</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>added edge, None if edge between nodes already present</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#graph_library.DirectedEdge" title="graph_library.DirectedEdge">DirectedEdge</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="graph_library.UndirectedMultiGraph">
+<em class="property">class </em><code class="descclassname">graph_library.</code><code class="descname">UndirectedMultiGraph</code><span class="sig-paren">(</span><em>graph=None</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.UndirectedMultiGraph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases:<a class="reference internal" href="#graph_library.Graph" title="graph_library.Graph"><code class="xref py py-class docutils literal notranslate"><span class="pre">graph_library.Graph</span></code></a></p>
+</dd></dl>
+
+<dl class="function">
+<dt id="graph_library.set_weights">
+<code class="descclassname">graph_library.</code><code class="descname">set_weights</code><span class="sig-paren">(</span><em>graph</em>, <em>weights</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.set_weights" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="graph_library.directed_graph_from_dict">
+<code class="descclassname">graph_library.</code><code class="descname">directed_graph_from_dict</code><span class="sig-paren">(</span><em>data</em>, <em>weights=None</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.directed_graph_from_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a directed graph from a dictionary. The keys of the dictionary correspond to the nodes of the graph and the value for a key correspond to the incident nodes of the node that key represents
+:param data: the dictionary containing the neighbour information
+:type data: dict
+:param weights: the weights for each edge
+:type weights: dict
+:return: the corresponding undirected graph
+:rtype: DirectedGraph</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="graph_library.undirected_graph_from_dict">
+<code class="descclassname">graph_library.</code><code class="descname">undirected_graph_from_dict</code><span class="sig-paren">(</span><em>data</em>, <em>weights=None</em><span class="sig-paren">)</span><a class="headerlink" href="#graph_library.undirected_graph_from_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an undirected graph from a dictionary. The keys of the dictionary correspond to the nodes of the graph and the value for a key correspond to the incident nodes of the node that key represents
+:param data: the dictionary containing the neighbour information
+:type data: dict
+:param weights: the weights for each edge
+:type weights: dict
+:return: the corresponding undirected graph
+:rtype: UnDirectedGraph</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Dieter Mourisse.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/language_data.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

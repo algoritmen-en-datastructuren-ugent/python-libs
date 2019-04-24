@@ -1,0 +1,7 @@
+priority\_queue module
+======================
+
+.. automodule:: priority_queue
+    :members:
+    :undoc-members:
+    :show-inheritance:

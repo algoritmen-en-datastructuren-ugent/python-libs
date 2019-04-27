@@ -82,7 +82,7 @@ class Node(AnnotatedObject):
         :return: formatted string representation
         :rtype: str
         """
-        return f"{self.name}{' ' + self.get_annotations() if self.has_annotation() else ''}"
+        return f"{self.name}{self.get_annotations() if self.has_annotation() else ''}"
 
     def __eq__(self, other):
         """

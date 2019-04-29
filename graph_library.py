@@ -172,6 +172,19 @@ class Edge(AnnotatedObject):
         """
         return node == self.__node1 or node == self.__node2
 
+    def __repr__(self):
+        """
+        Create a string representation of the edge.
+
+        :return: string representation
+        :rtype: str
+        """
+        repres = '{}({}, {}'.format(self.__class__.__name__, repr(self.__node1), repr(self.__node2))
+        if self.weight is not None:
+            repres += f', weight={repr(self.weight)}'
+        repres += ')'
+        return repres
+
 class DirectedEdge(Edge):
     """Represents a directed edge. This type of edges can be added to a directed graph. An edge (a,b) is not equal to a corresponding edge (b,a)."""
 

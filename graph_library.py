@@ -858,7 +858,7 @@ class Walk:
         self.length += 1
 
     def append(self, node):
-         """
+        """
         Appends a node to a walk
 
         :param node: the node to append

@@ -499,7 +499,7 @@ class Graph:
         :return: out degree of the given node
         :rtype: int
         """
-        return len(self.get_outgoing_edges())
+        return len(self.get_outgoing_edges(node))
 
     def get_incoming_edges(self, node):
         """
@@ -638,7 +638,7 @@ class UnDirectedGraph(SimpleGraph):
         :return: added edge, None if edge between nodes already present
         :rtype: UnDirectedEdge
         """
-        if super().contains_edge_between(source, destination):
+        if super().contains_edge_between(source, destination) or super().contains_edge_between(destination, source):
             return None
 
         edge = UndirectedEdge(source, destination)
@@ -765,6 +765,154 @@ class UndirectedMultiGraph(Graph):
             """
             return super().get_out_degree(node)
 
+
+class WalkNode:
+
+    def __init__(self, node):
+        """
+        Creates a single node to use in a walk
+
+        :param node: the node belonging to the walknode
+        :type node: Node
+        """
+        self.content = node
+        self.next = None
+        self.previous = None
+
+
+class Walk:
+
+    def __init__(self, nodes = None):
+        """
+        Creates a new walk
+
+        :param nodes: when None, the walk will be empty, otherwise it will consist of these nodes
+        :type nodes: list
+        """
+        if nodes is None:
+            self.head = None
+            self.tail = None
+            self.length = 0
+        else:
+            assert isinstance(nodes, list), f"expected list or None, got {type(nodes)}"
+            
+            if all(isinstance(node, Node) for node in nodes):
+                walknodes = [WalkNode(node) for node in nodes]
+            else:
+                walknodes = [WalkNode(Node(node)) for node in nodes]
+
+            self.head = walknodes[0]
+            self.tail = walknodes[-1]
+            self.length = len(walknodes)
+
+            for index in range(0, len(nodes)):
+                if index > 0:
+                    walknodes[index-1].next = walknodes[index]
+                if index < len(nodes) - 1:
+                    walknodes[index+1].previous = walknodes[index]
+           
+    def __repr__(self):
+        contents = [node for node in self.get_all_nodes()]
+        return f"Walk({contents!r})"
+
+    def get_all_nodes(self):
+        """
+        Returns all nodes part of this walk.
+
+        :rtype: list
+        """
+        result = []
+        current = self.head
+        while current is not None:
+            result.append(current.content)
+            current = current.next
+        return result
+
+    def prepend(self, node):
+        """
+        Prepends a node to a walk
+
+        :param node: the node to prepend
+        :type node: Node
+        """
+        walknode = WalkNode(node)
+        walknode.next = self.head
+        if self.head is not None:
+            self.head.previous = walknode
+            self.head = walknode
+        else:
+            self.head = self.tail = walknode
+        self.length += 1
+
+    def append(self, node):
+         """
+        Appends a node to a walk
+
+        :param node: the node to append
+        :type node: Node
+        """
+        walknode = WalkNode(node)
+        walknode.previous = self.tail
+        if self.tail is not None:
+            self.tail.next = walknode
+            self.tail = walknode
+        else:
+            self.head = self.tail = walknode
+        self.length += 1
+
+    def insert_in_walk(self, walk, after):
+        before = after.next
+        after.next = walk.head
+        walk.head.previous = after
+        if before is not None:
+            before.previous = walk.tail
+        walk.tail.next = before
+
+    def insert_at(self, node, index):
+        assert 0 <= index <= self.length, f"index {index} does not exist"
+
+        cindex = 0
+        previous_node, next_node = None, self.head
+        while index < cindex:
+            previous_node, next_node = next_node, next_node.next
+            cindex += 1
+
+        walk = Walk([node])
+        self.insert_in_walk(walk, previous_node, next_node)
+        length += 1
+
+    def insert(self, after, walk):
+        """
+        Extend the walk
+
+        :param after: the node after which we will extend
+        :type after: Node
+        :param walk: the walk that will be inserted
+        :type walk: Walk
+        """
+        walknode = self.head
+        while walknode is not None and walknode.content != after:
+            walknode = walknode.next
+        if walknode is not None:
+            self.insert_in_walk(walk, walknode)
+
+def fill_graph(graph, data, weights = None):
+    nodes = dict()
+    for key in data:
+        node = Node(key)
+        nodes[key] = node
+        graph.add_node(node)
+
+    for node in data:
+        for neighbour in data[node]:
+            graph.add_edge_between(nodes[node], nodes[neighbour])
+
+    if weights is not None:
+        set_weights(graph, weights)
+
+    return graph
+
+
 def set_weights(graph, weights):
     for edge in weights:
         source, dest = [graph.get_node_from_name(nodename) for nodename in edge]
@@ -783,20 +931,21 @@ def directed_graph_from_dict(data, weights = None):
     :rtype: DirectedGraph
     """
     result = DirectedGraph()
-    nodes = dict()
-    for key in data:
-        node = Node(key)
-        nodes[key] = node
-        result.add_node(node)
+    return fill_graph(result, data, weights = weights)
 
-    for node in data:
-        for neighbour in data[node]:
-            result.add_edge_between(nodes[node], nodes[neighbour])
+def directed_multigraph_from_dict(data, weights = None):
+    """
+    Creates a directed multigraph from a dictionary. The keys of the dictionary correspond to the nodes of the graph and the value for a key correspond to the incident nodes of the node that key represents
+    :param data: the dictionary containing the neighbour information
+    :type data: dict
+    :param weights: the weights for each edge
+    :type weights: dict
+    :return: the corresponding undirected graph
+    :rtype: DirectedMultiGraph
+    """
+    result = DirectedMultiGraph()
+    return fill_graph(result, data, weights = weights)
 
-    if weights is not None:
-        set_weights(result, weights)
-
-    return result
 
 def undirected_graph_from_dict(data, weights = None):
     """
@@ -809,18 +958,17 @@ def undirected_graph_from_dict(data, weights = None):
     :rtype: UnDirectedGraph
     """
     result = UnDirectedGraph()
-    nodes = dict()
-    for key in data:
-        node = Node(key)
-        nodes[key] = node
-        result.add_node(node)
+    return fill_graph(result, data, weights = weights)
 
-    for node in data:
-        for neighbour in data[node]:
-            if not result.contains_edge_between(nodes[node], nodes[neighbour]):
-                result.add_edge_between(nodes[node], nodes[neighbour])
-
-    if weights is not None:
-        set_weights(result, weights)
-
-    return result
+def undirected_multigraph_from_dict(data, weights = None):
+    """
+    Creates an undirected multigraph from a dictionary. The keys of the dictionary correspond to the nodes of the graph and the value for a key correspond to the incident nodes of the node that key represents
+    :param data: the dictionary containing the neighbour information
+    :type data: dict
+    :param weights: the weights for each edge
+    :type weights: dict
+    :return: the corresponding undirected graph
+    :rtype: UnDirectedMultiGraph
+    """
+    result = UnDirectedMultiGraph()
+    return fill_graph(result, data, weights = weights)

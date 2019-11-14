@@ -880,19 +880,18 @@ class Walk:
         if before is not None:
             before.previous = walk.tail
         walk.tail.next = before
+        self.length += walk.length
 
     def insert_at(self, node, index):
         assert 0 <= index <= self.length, f"index {index} does not exist"
 
-        cindex = 0
         previous_node, next_node = None, self.head
-        while index < cindex:
-            previous_node, next_node = next_node, next_node.next
-            cindex += 1
+        for _ in range(index):
+            previous_node = next_node
+            next_node = next_node.next
 
-        walk = Walk([node])
-        self.insert_in_walk(walk, previous_node, next_node)
-        length += 1
+        inserted = Walk([node])
+        self.insert_in_walk(inserted, previous_node)
 
     def insert(self, after, walk):
         """
@@ -981,7 +980,7 @@ def undirected_multigraph_from_dict(data, weights = None):
     :param weights: the weights for each edge
     :type weights: dict
     :return: the corresponding undirected graph
-    :rtype: UnDirectedMultiGraph
+    :rtype: UndirectedMultiGraph
     """
-    result = UnDirectedMultiGraph()
+    result = UndirectedMultiGraph()
     return fill_graph(result, data, weights = weights)
